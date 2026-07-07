@@ -5,4 +5,5 @@ This repository contains my independent solutions to the programming exercises f
 ## 📂 Projects Completed
 * **Guessing Game**: A console-based game practicing random number generation, conditional statements (`if/else`), and user input loops.
 * **Fibonacci Sequence**: An algorithmic script calculating the sequence to practice iterative loops (`for` / `while`) and variable swapping logic.
-* **Even, Odd, and Zeros Counts**: Program that finds the number of evens, odd, and zeros ('for' / 'if/else')
+* **Even, Odd, and Zeros Counts**: Program that finds the number of evens, odd, and zeros (`for` / `if/else`)
+* **Divisibility_Test_By_11**: A fastest algorithmic way to check if a number is divisible by 11 (`while` and `if/else`).
