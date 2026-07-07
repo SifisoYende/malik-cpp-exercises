@@ -1,36 +1,53 @@
-/***********************************************************************
-* Author: Sifiso Yende
+/************************************************************************
+*  Author: Sifiso Yende
 *
-* Program: The program takes a positive integer as an input,
-* then check if it's divisible by 11, then display the message.
-************************************************************************/
+*  Program: The program gets the present populations of two cities A,B,
+*  where the population of A is less than of B,
+*  and their growth rates, then find out when will population A
+*  be equal or greater than of B.
+****************************************************************************/
 #include <iostream>
-#include <cmath>
+#include <iomanip>
+
 using namespace std;
 
 int main()
 {
-    unsigned num;
-    int T = 0;
-    int count = 0;
-    cout << "Enter a non negative integer:\n";
-    cin >> num;
+    int pop_A;
+    int pop_B;
 
-    while (num != 0)
+    double rate_A;
+    double rate_B;
+
+    int numOfYears = 0;
+
+    cout << "Enter the current populations of city A, and B, respectively:\n";
+    cin >> pop_A >> pop_B;
+    cout << endl;
+
+    cout << "Enter the growth rates (%) of city A, and B, respectively:\n";
+    cin >> rate_A >> rate_B;
+
+    rate_A = rate_A/100.0;
+    rate_B = rate_B/100.0;
+    cout << endl;
+
+    cout << fixed << showpoint << setprecision(2);
+    cout << "Population_A:    " << "Population_B:    " << "Years:    "<<endl;
+    cout << setw(12) << pop_A <<setw(17)<<pop_B << setw(11)<<numOfYears << endl;
+    while (pop_A < pop_B)
     {
-        T += pow(-1,count)*(num%10);
-        num = num/10;
-        count++;
+        numOfYears++;
+        pop_A += (pop_A*rate_A);
+        pop_B += (pop_B*rate_B);
+
+        cout << setw(12) << pop_A <<setw(17)<<pop_B << setw(11)<<numOfYears
+             << endl;
     }
-    if (T%11 == 0)
-    {
-        cout << "T = "<<T<<" and is ";
-        cout <<"Divisble by 11"<< endl;
-    }
-    else
-    {
-        cout << "T = "<<T<<" and is ";
-        cout << "Not divisible by 11" << endl;
-    }
+
+    cout <<"After "<< numOfYears <<" years, "
+         << "population_A will be: " <<pop_A
+         << " greater or equal to: " <<pop_B
+         << " of population_B."<<endl;
     return 0;
 }
