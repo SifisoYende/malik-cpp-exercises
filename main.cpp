@@ -1,43 +1,57 @@
+//*********************************************************
+// Author: S.S Yende
+//
+// Program: Counts zeros, odds, and evens
+// This program counts the number of odd and even numbers.
+// The program also counts the number of zeros.
+//**********************************************************
+
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 
 using namespace std;
 
 int main()
 {
+    // Declaring Variables.
+
+    int numOfEvens;
+    int numOfOdds;
+    int numOfZeros;
+    int numOfInt;
     int num;
-    int guess;
-    bool isGuessed;
 
-    srand(time(0));
-    num = rand() % 100;
+    // Initializing Variables.
 
-    isGuessed = false;
+    numOfEvens = 0;
+    numOfOdds = 0;
+    numOfZeros = 0;
 
-    while (!isGuessed)
+    // Getting number of integers.
+    cout << "Enter the number of integers:\n";
+    cin >> numOfInt;
+    cout << endl;
+
+    cout << "Enter the "<< numOfInt << " integers." << endl;
+    for (int i = 0; i < numOfInt; i++)
     {
-        cout << "Enter an integer greater than or equal to 0 and less than 100: ";
-        cin >> guess;
-        cout << endl;
+        cin >> num;
 
-        if (guess == num)
+        if ( num%2 == 0)
         {
-            cout << "You guessed correctly!!" << endl;
-            isGuessed = true;
-        }
+            numOfEvens += 1;
 
-        else if (guess < num)
-        {
-            cout << "Your guess is less than the number!"<< endl << "Guess again!";
-            cout << endl;
+            if ( num == 0)
+            {
+                numOfZeros += 1;
+            }
         }
 
         else
-        {
-            cout << "Your guess is higher than the number!" << endl << "Guess again!" << endl;
-        }
+            numOfOdds += 1;
     }
 
+    cout <<"There are "<<numOfEvens <<" even integers.\n";
+    cout << "There are "<<numOfOdds << " odd integers.\n";
+    cout << "There are "<<numOfZeros << " zeros integer.\n";
     return 0;
 }
