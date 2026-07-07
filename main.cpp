@@ -1,7 +1,7 @@
 /***********************************************************************
 * Author: Sifiso Yende                                                 *
 *                                                                      *
-* Program: The program, takes an integer as input, then                *
+* Program: The program takes an integer as input, then                 *
 * displays if it is a prime or not prime.                              *
 ************************************************************************/
 #include <iostream>
@@ -15,27 +15,39 @@ int main()
     cout << "Enter an integer:\n";
     cin >> num;
 
-    if (num == 1)
+    // Fix: Catch 0, 1, and all negative numbers
+    if (num <= 1)
     {
-        cout << "Not Prime";
-        return 1;
+        cout << "Not Prime" << endl;
+        return 0; 
     }
-    if (num ==2)
+    
+    // Catch 2 explicitly
+    if (num == 2)
     {
-        cout << "Prime!!!";
+        cout << "Prime!!!" << endl;
         return 0;
     }
 
-    for (int i =3; (i<=num/2); i++)
+    // Fix: Catch all other even numbers instantly
+    if (num % 2 == 0)
     {
-        if (num%i == 0)
+        cout << "Not Prime!!!" << endl;
+        return 0;
+    }
+
+    // Optimisation: Only check odd numbers up to the square root
+    // i * i <= num is the same as i <= sqrt(num) but faster
+    for (int i = 3; (i * i <= num); i += 2)
+    {
+        if (num % i == 0)
         {
-            cout << "Not Prime!!!";
-            return 1;
+            cout << "Not Prime!!!" << endl;
+            return 0;
         }
     }
-    cout << "Prime!!!";
-    cout << endl;
+    
+    cout << "Prime!!!" << endl;
 
     return 0;
 }
