@@ -1,57 +1,36 @@
-//*********************************************************
-// Author: S.S Yende
-//
-// Program: Counts zeros, odds, and evens
-// This program counts the number of odd and even numbers.
-// The program also counts the number of zeros.
-//**********************************************************
-
+/***********************************************************************
+* Author: Sifiso Yende
+*
+* Program: The program takes a positive integer as an input,
+* then check if it's divisible by 11, then display the message.
+************************************************************************/
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
 int main()
 {
-    // Declaring Variables.
+    unsigned num;
+    int T = 0;
+    int count = 0;
+    cout << "Enter a non negative integer:\n";
+    cin >> num;
 
-    int numOfEvens;
-    int numOfOdds;
-    int numOfZeros;
-    int numOfInt;
-    int num;
-
-    // Initializing Variables.
-
-    numOfEvens = 0;
-    numOfOdds = 0;
-    numOfZeros = 0;
-
-    // Getting number of integers.
-    cout << "Enter the number of integers:\n";
-    cin >> numOfInt;
-    cout << endl;
-
-    cout << "Enter the "<< numOfInt << " integers." << endl;
-    for (int i = 0; i < numOfInt; i++)
+    while (num != 0)
     {
-        cin >> num;
-
-        if ( num%2 == 0)
-        {
-            numOfEvens += 1;
-
-            if ( num == 0)
-            {
-                numOfZeros += 1;
-            }
-        }
-
-        else
-            numOfOdds += 1;
+        T += pow(-1,count)*(num%10);
+        num = num/10;
+        count++;
     }
-
-    cout <<"There are "<<numOfEvens <<" even integers.\n";
-    cout << "There are "<<numOfOdds << " odd integers.\n";
-    cout << "There are "<<numOfZeros << " zeros integer.\n";
+    if (T%11 == 0)
+    {
+        cout << "T = "<<T<<" and is ";
+        cout <<"Divisble by 11"<< endl;
+    }
+    else
+    {
+        cout << "T = "<<T<<" and is ";
+        cout << "Not divisible by 11" << endl;
+    }
     return 0;
 }
