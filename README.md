@@ -11,3 +11,4 @@ This repository contains my independent solutions to the programming exercises f
 * **Greatest Common Divisor**: Given two integers a, b, we find the highest common factor (`while`)
 * **Prime_Version2**: Given a positive integer n, we find the first n prime numbers.
 * **Reverse_Digit**: Given an integer n, we reverse it's digits.
+* **vowel_count**: Given a sequence of characters, we count the number of vowels.
