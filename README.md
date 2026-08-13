@@ -9,3 +9,4 @@ This repository contains my independent solutions to the programming exercises f
 * **Divisibility_Test_By_11**: A fastest algorithmic way to check if a number is divisible by 11 (`while` and `if/else`).
 * **Population_Comparison**: A program to find growth of populations of cities with years, and find which year one city exceed another (`while`).
 * **Prime_Finder**: A fastest way to find if a number is a prime (`for`/`if`).
+* **Day In A Year**: The program takes a date in the form month-day-year, then return day number in a year (`reference variable` / `functions`)
