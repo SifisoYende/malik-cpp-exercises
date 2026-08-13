@@ -9,3 +9,4 @@ This repository contains my independent solutions to the programming exercises f
 * **Prime_Finder**: A fastest way to find if a number is a prime (`for`/`if`).
 * **Day In A Year**: The program takes a date in the form month-day-year, then return day number in a year (`reference variable` / `functions`)
 * **Greatest Common Divisor**: Given two integers a, b, we find the highest common factor (`while`)
+* **Prime_Version2**: Given a positive integer n, we find the first n prime numbers.
