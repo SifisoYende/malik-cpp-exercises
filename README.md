@@ -13,4 +13,9 @@ This repository contains my independent solutions to the programming exercises f
 * **Reverse_Digit**: Given an integer n, we reverse it's digits.
 * **vowel_count**: Given a sequence of characters, we count the number of vowels.
 * **Selection_Sort**: Given a list of 10 integers, a sorted list is produced.
-   
+* **Greatest_Common_Divisor**: Given two integers, a highest common factor is returned.
+* **computeCompoundingInvestment**: Given a principal amount, the interest rate, and period, the accumulating amount is shown for each months
+*  **LinearSearch**: Given a list and searched item, the position is returned if in the list, and -1, if not.
+*  **pigLatinForm**: Given a string, a pig Latin Form of string is returned.
+*  **vowel_Remover**: Given a string, a new string is returned without vowels.
+*  **triangle_Type**: Given three sides lengths, a type of a triangle is returned.
