@@ -12,3 +12,5 @@ This repository contains my independent solutions to the programming exercises f
 * **Prime_Version2**: Given a positive integer n, we find the first n prime numbers.
 * **Reverse_Digit**: Given an integer n, we reverse it's digits.
 * **vowel_count**: Given a sequence of characters, we count the number of vowels.
+* **Selection_Sort**: Given a list of 10 integers, a sorted list is produced.
+   
