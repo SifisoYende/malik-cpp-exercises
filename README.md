@@ -19,3 +19,4 @@ This repository contains my independent solutions to the programming exercises f
 *  **pigLatinForm**: Given a string, a pig Latin Form of string is returned.
 *  **vowel_Remover**: Given a string, a new string is returned without vowels.
 *  **triangle_Type**: Given three sides lengths, a type of a triangle is returned.
+* **Code_Detection**: The program detect error in secret code message written in decimal numbers.
